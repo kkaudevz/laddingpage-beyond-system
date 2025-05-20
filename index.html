@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(to bottom, #1d182e 60%, #484258 100%);
+        }
+
+        .container-navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1d182e;
+            padding: 15px 20px;
+        }
+        .navbar-logo {
+            width: 80px;
+            height: auto;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding-right: 5vh;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4453e0;
+        }
+
+        .titulo-navbar {
+            color: #fff;
+            font-size: 2rem;
+        }
+
+        .container-main {
+            position: relative;
+        }
+
+        .img-work-fundo {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            opacity: 0.5;
+        }
+
+        .container-main-title {
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .container-main-title h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .container-main-title h3 {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+        }
+
+        .container-main-info{
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container-main-info h2{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .card-text-info {
+    max-width: 37rem; /* Permite que o conteúdo ocupe toda a largura do contêiner */
+    display: flex;
+    flex-direction: row; /* Alinha os itens lado a lado */
+    gap: 1rem; /* Espaçamento entre o texto e a imagem */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 1rem; /* Espaçamento interno do contêiner */
+    box-sizing: border-box; /* Inclui o padding no tamanho total da div */
+}
+
+.card-text-info p {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    margin: 0; /* Remove margens padrão do parágrafo */
+}
+
+.img-text-info {
+    width: 20rem; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* (Opcional) Bordas arredondadas na imagem */
+    margin-left: auto; /* Move a imagem para a direita */
+}
+
+
+        
+
+        .container-main-valores {
+            text-align: center;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .container-main-valores h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .container-cards-valores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; 
+        }
+
+        .card-valores {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            text-align: center; 
+            padding: 20px;
+            background-color: #2d2742;
+            border-radius: 8px;
+            max-width: 300px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .card-valores:hover {
+            transform: translateY(-10px); 
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+        }
+
+        .card-valores svg {
+            margin-bottom: 10px;
+            width: 5vh;
+            height: 5vh;
+        }
+
+
+        @media (max-width: 768px) {
+            .titulo-navbar {
+                font-size: 1.5rem;
+            }
+
+            .container-main-title h1 {
+                font-size: 2.5rem;
+            }
+
+            .container-main-title h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-navbar">
+        <img src="img/beyond-logo.png" class="navbar-logo" alt="Logo Beyond System">
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Princípios</a></li>
+            <li><a href="#servicos">Equipe</a></li>
+            <li><a href="#portifolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main class="container-main">
+        <img src="/img/work-image.jpg" class="img-work-fundo" alt="Imagem de Fundo">
+        <div class="container-main-title">
+            <h1>Beyond System</h1>
+            <h3>Transformando a sua experiência de maneira rápida e eficiente!</h3>
+        </div>
+        <div class="container-main-info">
+            <h2>Sobre nós</h2>
+            <div class="card-text-info">
+                    <p>A BEYOND é uma empresa de freelancers especializada em oferecer soluções inovadoras nas áreas de programação, edição de vídeo e design artístico. Fundada com a missão de transformar ideias em projetos de alto impacto, a BEYOND reúne profissionais altamente qualificados, com sólida experiência técnica e uma visão criativa que se destaca no mercado.</p>
+                    <img class="img-text-info" src="img/bnc-imgs.png">
+                </div>
+        </div>
+        
+        <div class="container-main-valores">
+            <h2>Nossos Valores</h2>
+            <br>
+            <div class="container-cards-valores">
+                <div class="card-valores">
+                    <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M11 9a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+                        <path fill-rule="evenodd" d="M9.896 3.051a2.681 2.681 0 0 1 4.208 0c.147.186.38.282.615.255a2.681 2.681 0 0 1 2.976 2.975.681.681 0 0 0 .254.615 2.681 2.681 0 0 1 0 4.208.682.682 0 0 0-.254.615 2.681 2.681 0 0 1-2.976 2.976.681.681 0 0 0-.615.254 2.682 2.682 0 0 1-4.208 0 .681.681 0 0 0-.614-.255 2.681 2.681 0 0 1-2.976-2.975.681.681 0 0 0-.255-.615 2.681 2.681 0 0 1 0-4.208.681.681 0 0 0 .255-.615 2.681 2.681 0 0 1 2.976-2.975.681.681 0 0 0 .614-.255ZM12 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" clip-rule="evenodd"/>
+                        <path d="M5.395 15.055 4.07 19a1 1 0 0 0 1.264 1.267l1.95-.65 1.144 1.707A1 1 0 0 0 10.2 21.1l1.12-3.18a4.641 4.641 0 0 1-2.515-1.208 4.667 4.667 0 0 1-3.411-1.656Zm7.269 2.867 1.12 3.177a1 1 0 0 0 1.773.224l1.144-1.707 1.95.65A1 1 0 0 0 19.915 19l-1.32-3.93a4.667 4.667 0 0 1-3.4 1.642 4.643 4.643 0 0 1-2.53 1.21Z"/>
+                      </svg>
+                    <h3>Excelência e Qualidade</h3>
+                    <br>
+                    <p>Entregamos soluções que superam expectativas, garantindo um trabalho detalhado e impecável em cada projeto.</p>
+                </div>
+                <div class="card-valores">
+                    <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z" clip-rule="evenodd"/>
+                      </svg>
+                    <h3>Compromisso com o Cliente</h3>
+                    <br>
+                    <p>Construímos parcerias sólidas com nossos clientes, priorizando suas necessidades e objetivos.</p>
+                </div>
+                <div class="card-valores">
+                    <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15v4m6-6v6m6-4v4m6-6v6M3 11l6-5 6 5 5.5-5.5"/>
+                      </svg>
+                    <h3>Foco na Solução</h3>
+                    <br>
+                    <p>Encaramos cada desafio como uma oportunidade de criar algo significativo e resolver problemas de forma prática e eficiente.</p>
+                </div>
+                <div class="card-valores">
+                    <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M7.05 4.05A7 7 0 0 1 19 9c0 2.407-1.197 3.874-2.186 5.084l-.04.048C15.77 15.362 15 16.34 15 18a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1c0-1.612-.77-2.613-1.78-3.875l-.045-.056C6.193 12.842 5 11.352 5 9a7 7 0 0 1 2.05-4.95ZM9 21a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Zm1.586-13.414A2 2 0 0 1 12 7a1 1 0 1 0 0-2 4 4 0 0 0-4 4 1 1 0 0 0 2 0 2 2 0 0 1 .586-1.414Z" clip-rule="evenodd"/>
+                      </svg>
+                    <h3>Inovação e Criatividade</h3>
+                    <br>
+                    <p>Buscamos constantemente novas ideias e tecnologias para oferecer soluções personalizadas e criativas.</p>
+                </div>
+                <div class="card-valores">
+                    <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M11.644 3.066a1 1 0 0 1 .712 0l7 2.666A1 1 0 0 1 20 6.68a17.694 17.694 0 0 1-2.023 7.98 17.406 17.406 0 0 1-5.402 6.158 1 1 0 0 1-1.15 0 17.405 17.405 0 0 1-5.403-6.157A17.695 17.695 0 0 1 4 6.68a1 1 0 0 1 .644-.949l7-2.666Zm4.014 7.187a1 1 0 0 0-1.316-1.506l-3.296 2.884-.839-.838a1 1 0 0 0-1.414 1.414l1.5 1.5a1 1 0 0 0 1.366.046l4-3.5Z" clip-rule="evenodd"/>
+                      </svg>
+                    <h3>Agilidade e Eficiência</h3>
+                    <br>
+                    <p>Trabalhamos de forma rápida e assertiva, garantindo entregas dentro do prazo sem comprometer a qualidade.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
